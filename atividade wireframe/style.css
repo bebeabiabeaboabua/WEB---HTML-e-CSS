@@ -1,0 +1,587 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        body {
+            background-color: #A0938F;
+        }
+
+        .fonte {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        /*----------------------------------------------*/
+
+
+        header {
+            background-color: #8BF5D7;
+            top: 0;
+            /* fixa no topo */
+            left: 0;
+            /* começa na esquerda */
+            width: 100%;
+            color: #56756C;
+            padding-top: 10px;
+            border-bottom: 5px solid #D9D5A3;
+            display: flex;
+            align-items: center;
+            padding-left: 10%;
+            padding-right: 8%;
+            box-shadow: 0px 0px 100px rgb(109, 103, 83);
+            position: fixed;
+            z-index: 1000;
+            /* garante que fique acima de outros elementos */
+            margin-bottom: 10%;
+
+        }
+
+        header h3 {
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 2%;
+        }
+
+        #logo {
+            width: 60px;
+        }
+
+        /*----------------------------------------------*/
+
+
+        footer {
+            background-color: #56756C;
+            color: #9ed8b6;
+            padding: 15px;
+            text-align: left;
+            border-top: 3px solid #D9D5A3;
+        }
+
+        .footer-icons {
+            text-align: right;
+            margin-right: 5%;
+        }
+
+        .footer-icons img {
+            cursor: pointer;
+            width: 40px;
+            padding: 5px;
+        }
+
+        .contato-ajuda {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 50px;
+
+
+        }
+
+        .contato-ajuda a {
+            color: #91ebc8;
+
+        }
+
+        .footer-info {
+            display: flex;
+            gap: 40px;
+
+
+        }
+
+        /*----------------------------------------------*/
+
+
+        .banner {
+            padding: 8px;
+            text-decoration: none;
+            color: #56756C;
+            font-size: 20px;
+            padding-right: 30px;
+            display: inline-block;
+            /* 👈 isso faz o transform funcionar */
+            transition: transform 0.2s ease;
+            /* anima o efeito */
+            font-weight: 600;
+
+        }
+
+        .banner:hover {
+            transform: scale(1.1);
+            /* dá um efeitinho de zoom no hover */
+
+        }
+                @media (max-width: 600px) {
+                    .banner{
+                        padding-right: 5px;
+                    }
+                }
+
+        /*----------------------------------------------*/
+
+
+        .tela-login {
+            display: flex;
+            margin-top: 100px;
+            /* substitui o top */
+            width: 100%;
+            justify-content: center;
+            /* centraliza bonitinho */
+            align-items: center;
+            margin-bottom: 100px;
+
+
+        }
+
+        .camaleao-login {
+            float: left;
+            width: 30%;
+            height: 50%;
+        }
+
+        .login-box {
+            width: 30%;
+            height: 100%;
+            padding: 40px;
+            border: 10px solid rgb(180, 165, 136);
+            margin: 60px;
+            justify-content: center;
+            text-align: center;
+            border-radius: 30px;
+            background-color: #d4f5ee;
+            color: #756456;
+            box-shadow: 2px 10px 30px rgb(130, 139, 155);
+        }
+
+        /* espaçamento interno */
+        .login-box p {
+            margin-bottom: 15px;
+        }
+
+        .login-box h3 {
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .login-box label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .botao-entrar {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #91ebc8;
+            padding: 12px 30px;
+            border-radius: 12px;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+        }
+
+        .botao-entrar:hover {
+            background-color: #6fd3ad;
+            transform: scale(1.05);
+        }
+
+        input {
+            border: none;
+            border-radius: 10px;
+            height: 20px;
+            padding: 15px;
+            background-color: #a0d6b2;
+            color: #3e4e3b;
+            width: 50%;
+        }
+
+        input:focus{
+            outline: none;
+            box-shadow: 0 0 10px rgb(108, 120, 177);
+            background-color: rgb(192, 255, 241);
+            transform: scale(1.05);
+        }
+
+        .botao-caastro {}
+
+        /* Responsividade — tablet */
+        @media (max-width: 1024px) {
+            .tela-login {
+                flex-direction: column;
+                /* empilha o camaleão e o formulário */
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
+
+            .camaleao-login {
+                width: 50%;
+                height: auto;
+                margin-bottom: 40px;
+            }
+
+            .login-box {
+                width: 60%;
+                margin: 20px;
+                padding: 30px;
+            }
+        }
+
+        /* Responsividade — celular */
+        @media (max-width: 600px) {
+            .tela-login {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 60px;
+                margin-bottom: 60px;
+            }
+
+            .camaleao-login {
+                width: 70%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+
+            .login-box {
+                width: 80%;
+                margin: 10px;
+                padding: 25px;
+                border-width: 6px;
+                /* borda mais fina */
+                border-radius: 20px;
+                box-shadow: 1px 5px 15px rgba(130, 139, 155, 0.7);
+            }
+
+            .login-box h3 {
+                font-size: 20px;
+            }
+
+            .login-box a {
+                padding: 10px 25px;
+                margin-top: 30px;
+                font-size: 14px;
+            }
+
+            input {
+                width: 90%;
+                padding: 15px;
+                font-size: 14px;
+            }
+            
+        }
+
+
+        .cart-button {
+            background: none;
+            /* sem fundo */
+            border: none;
+            /* sem borda */
+            padding: 10px;
+            /* remove espaçamento interno */
+            cursor: pointer;
+            /* mostra a “mãozinha” */
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .cart-button:hover {
+            transform: scale(1.1);
+            /* aumenta levemente ao passar o mouse */
+            color: #000000;
+            /* muda a cor do ícone */
+        }
+
+        .cart-icon {
+            width: 28px;
+            height: 28px;
+            color: #56756C;
+            /* cor do ícone (pode trocar por branco, preto etc.) */
+        }
+
+
+        /*----------------------------------------------*/
+
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 50%;
+            position: relative;
+            margin: auto;
+            box-shadow: 10px 10px 30px #756456;
+            border-radius: 20px;
+            margin-top: 10%;
+        }
+
+        .slideshow-container img {
+            border-radius: 20px;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #3e4e3b;
+            font-size: 20px;
+            padding: 12px 20px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+        /*----------------------------------------------*/
+
+
+        .recomendados {
+            width: 100%;
+            height: 300px;
+            background-color: #8a7151;
+            box-shadow: 0px 0px 30px #857c71;
+            margin-bottom: 5%;
+            display: flex;
+            align-content: center;
+            border-radius: 2px;
+            justify-content: center;
+            gap: 15px;
+            vertical-align: middle;
+            padding: 10px;
+
+
+        }
+
+        .recomendados-titulo {
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+
+        .recomendados-titulo {
+            color: #ebbe85;
+            margin-bottom: 20px;
+
+        }
+
+        .item {
+            height: 100%;
+            padding: 20px;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+
+        .seta {
+            font-size: 24px;
+            cursor: pointer;
+            user-select: none;
+            margin-top: 6%;
+            color: #a1a04d;
+        }
+
+        .seta:hover {
+            transform: scale(1.05);
+            /* aumenta levemente ao passar o mouse */
+            color: #526149;
+            /* muda a cor do ícone */
+        }
+
+        /* Responsividade — tablet */
+        @media (max-width: 1200px) {
+            .recomendados {
+                width: 100%;
+                height: 190px;
+                gap: 0px;
+            }
+
+            .item {
+                padding: 5px;
+            }
+
+            .slideshow-container {
+                margin-top: 15%;
+                width: 70%;
+            }
+        }
+
+        /* Responsividade — celular */
+        @media (max-width: 600px) {
+            .carrossel {
+                gap: 10px;
+            }
+
+            .item {
+                width: 45%;
+                /* duas caixinhas por linha */
+                height: 100px;
+            }
+
+            .seta {
+                display: none;
+                /* esconde as setas no celular */
+            }
+
+            .slideshow-container {
+                margin-top: 30%;
+                width: 100%;
+            }
+        }
+
+
+        .decoracao1 {
+            position: absolute;
+            /* tira a imagem do fluxo normal */
+            top: 90px;
+            /* distância do topo da tela */
+            left: 30px;
+            /* distância da esquerda da tela */
+            width: 15%;
+            /* tamanho da imagem */
+            height: auto;
+            /* mantém proporção */
+            z-index: 10;
+            /* deixa acima de outros elementos se necessário */
+        }
+
+        .blog-section {
+            width: 100%;
+            margin: 100px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .blog-titulo {
+            color: #91ebc8;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px rgba(145, 235, 200, 0.3);
+        }
+
+        /* container do depoimento */
+        .box-perfil {
+            width: 70%;
+            background-color: #56756C;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* imagem redonda */
+        .perfil {
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #91ebc8;
+            box-shadow: 0 0 15px rgba(145, 235, 200, 0.4);
+        }
+
+        .perfil img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* texto */
+        .blog-texto {
+            color: #fff;
+            line-height: 1.8;
+            text-align: justify;
+            font-size: 17px;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-texto p {
+            margin-bottom: 15px;
+        }
+
+        /* assinatura */
+        .autor {
+            text-align: right;
+            font-style: italic;
+            color: #a0d6b2;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        /* responsivo */
+        @media (max-width: 900px) {
+            .box-perfil {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+
+            .perfil {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+
+            .blog-texto {
+                font-size: 15px;
+            }
+
+            .blog-titulo {
+                font-size: 32px;
+            }
+        }
