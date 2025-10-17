@@ -1,0 +1,263 @@
+        body {
+            background-color: #363740;
+            margin: 0;
+            padding: 0;
+        }
+
+        p,
+        ol,
+        label {
+            font-size: 20px;
+            color: #D9D5A3;
+        }
+
+        h1,
+        h2 {
+            color: #BCBF69;
+        }
+
+        .topo {
+            background-color: #403001;
+            border: 10px outset #D9D5A3;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            /* espaço entre os blocos */
+            margin-top: 30px;
+        }
+
+        .login-box {
+            border: 5px outset #D9D5A3;
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .loginSapo {
+            background-color: rgb(68, 75, 51);
+        }
+
+        .loginHum {
+            background-color: #1c2538;
+        }
+
+        .tituloLogin {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cadastro {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cadastro a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 10px 10px 8px #272531;
+            background-color: #d5f546 !important;
+
+        }
+
+        footer {
+            background-color: #1c2538;
+            color: #BCBF69;
+            padding: 15px;
+            text-align: center;
+            border-top: 3px solid #BCBF69;
+        }
+
+        header {
+            background-color: #403001;
+            color: #D9D5A3;
+            padding: 20px;
+            border-bottom: 5px solid #D9D5A3;
+
+            display: flex;
+            /* ativa o flexbox */
+            align-items: center;
+            /* alinha verticalmente */
+            justify-content: space-between;
+            /* separa logo de um lado e título do outro */
+        }
+
+        header h1 {
+            flex-grow: 1;
+            /* faz o título ocupar o espaço restante */
+            text-align: center;
+            /* título no centro */
+            margin: 0;
+        }
+
+        .logo {
+            margin: 0;
+            /* tira espaçamento extra */
+        }
+
+        main {
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+        }
+
+        form {
+            margin-left: 40px;
+            margin-right: 40px;
+            text-align: left;
+        }
+
+        .botaoEntrar {
+            width: 100px;
+            background-color: #d5f546;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #403001;
+            border: none;
+            padding: 5px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #D9D5A3;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #BCBF69;
+        }
+
+        a.botao {
+            background: #BCBF69;
+            color: #403001;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 10px 10px 8px #272531;
+        }
+
+        ol {
+            font-size: 20px;
+            color: #D9D5A3;
+        }
+
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #D9D5A3;
+            border-color: #d5f546;
+            background-color: #363740;
+
+        }
+
+        .tabela {
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        .quicksand-fonte {
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+
+        #atividade {
+            text-align: justify;
+            text-indent: 4em;
+            word-spacing: 6px;
+            letter-spacing: 4px;
+            padding: 5%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+
+        }
+
+        /* From Uiverse.io by neerajbaniwal */
+        .btn-shine {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 12px 48px;
+            color: #e20000;
+            background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+            background-position: 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s infinite linear;
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        @-moz-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @-webkit-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @-o-keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0;
+            }
+
+            60% {
+                background-position: 180px;
+            }
+
+            100% {
+                background-position: 180px;
+            }
+        }
