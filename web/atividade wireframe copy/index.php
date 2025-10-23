@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajuda.me</title>
+    <link rel="shortcut icon" href="imagens/camaleao.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+
+<body class="fonte body-index">
+
+    <?php
+    session_start();
+    ?>
+
+    <header>
+
+        <a href="index.php"><img src="imagens/camaleao.png" id="logo" alt="logo camaleao"></a>
+        <h3>ajuda.me</h3>
+
+        <div>
+            <p><a href="index.php" class="banner">início</a></p>
+        </div>
+
+        <?php if (isset($_SESSION['nome'])): ?>
+            <div class="usuario-logado">
+                <p>👋 Olá, <?php echo htmlspecialchars($_SESSION['nome']); ?>!</p>
+                <p><a href="logout.php" class="banner">sair</a></p>
+            </div>
+        <?php else: ?>
+            <div>
+                <p><a href="login.html" class="banner">login</a></p>
+            </div>
+        <?php endif; ?>
+
+
+        <div class="banner">
+            <button class="cart-button" onclick="window.location.href='carrinho.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div style="margin-top: 5%;">
+
+
+
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="imagens/destaques.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="imagens/queridos.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="imagens/lancamentos.png" style="width:100%">
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <script>
+                let slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    slides[slideIndex - 1].style.display = "block";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+
+                // Carrossel automático
+                function showSlides() {
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex >= slides.length) slideIndex = 0;
+                    slides[slideIndex].style.display = "block";
+                    for (let i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    dots[slideIndex].className += " active";
+                    setTimeout(showSlides, 4000); // muda a cada 4 segundos
+                }
+            </script>
+
+
+            <h2 class="recomendados-titulo"><b style="color: rgb(25, 124, 124);">ajuda.me</b> tem livros de autoajuda,
+                filosofia e psicologia</h2>
+
+
+            <div class="recomendados">
+
+                <div class="seta">&#10094;</div> <!-- seta esquerda -->
+                <img src="imagens/tao-te-ching.png" class="item">
+                <img src="imagens/gato-viajante.png" class="item">
+                <img src="imagens/desacelera.png" class="item">
+                <img src="imagens/criança-interior.png" class="item">
+                <img src="imagens/sociedade-do-cansaço.png" class="item">
+                <img src="imagens/homem-mais-rico.png" class="item">
+                <img src="imagens/morte.png" class="item">
+
+                <div class="seta">&#10095;</div> <!-- seta direita -->
+
+            </div>
+
+            <section class="blog-section">
+                <h2 class="blog-titulo">comentário do dia 𖹭</h2>
+
+                <div class="box-perfil">
+                    <div class="perfil">
+                        <img src="imagens/pessoa.png" alt="perfil pessoa">
+                    </div>
+
+                    <div class="blog-texto">
+                        <p>
+                            “achei muito bom quando eu entrei no site e já de cara tinha os destaques do mês. Isso me
+                            ajudou a escolher um livro que estava de acordo com as minhas necessidades. Foi emocionante
+                            receber o livro em minha casa, pois a experiência é única. é isso”
+                        </p>
+                        <p class="autor">— Amábile, leitora da ajuda.me <br> <br><i
+                                style="cursor: pointer; text-decoration: underline">ver mais... -></i></p>
+                    </div>
+                </div>
+            </section>
+
+
+            <img src="imagens/plantar.png" class="decoracao1" alt="estrela decorativa" style="z-index: -1000;">
+
+
+
+
+    </main>
+
+    <footer>
+        <div style="text-align: center;">
+            <p>*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚</p>
+            <p>&copy; 2025 ajuda.me. Todos os direitos reservados.</p>
+        </div>
+        <br>
+
+        <div class="footer-info">
+            <div class="contato-ajuda">
+                <h3>Contato</h3>
+                <p>ajudamelivraria@ajuda.me</p>
+                <p>(47)99625-9080</p>
+                <p><a href="contato.html">Instagram</a></p>
+                <p><a href="contato.html">Facebook</a></p>
+                <p><a href="contato.html">Twitter</a></p>
+            </div>
+            <div class="contato-ajuda">
+                <h3>Ajuda</h3>
+                <p><a href="contato.html">Fórum</a></p>
+                <p><a href="contato.html">Suporte</a></p>
+                <p>(44)9985-3234</p>
+
+            </div>
+        </div>
+        <div class="footer-icons">
+            <img src="imagens/mapas-do-google.png" alt="google maps">
+            <img src="imagens/whatsapp.png" alt="whatsapp">
+
+            <img src="imagens/instagram.png" alt="instagram">
+            <img src="imagens/facebook.png" alt="facebook">
+
+
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajuda.me</title>
+    <link rel="shortcut icon" href="imagens/camaleao.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="fonte" style="background-color: rgb(106, 220, 228);">
+    <header>
+
+        <a href="index.html"><img src="imagens/camaleao.png" id="logo" alt="logo camaleao"></a>
+        <h3>ajuda.me</h3>
+
+        <div>
+            <p><a href="index.html" class="banner">início</a></p>
+        </div>
+
+        <div>
+            <p><a href="login.html" class="banner">login</a></p>
+        </div>
+
+        <div class="banner">
+            <button class="cart-button" onclick="window.location.href='carrinho.html'">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="tela-login">
+            <img src="imagens/camaleao.png" class="camaleao-login">
+            <div class="login-box">
+
+                <p>ajuda.me</p>
+                <h3>criar conta</h3>
+
+                <p>que bom te conhecer!</p>
+                <form method="POST" action="cadastro.php">
+
+                    <label for="usuario">me diga como devo te chamar</label>
+
+                    <input type="text" id="usuario" placeholder="seu nome" class="fonte" name="nome" role="">
+
+                    <label for="email">email</label>
+
+                    <input type="email" id="email" placeholder="email" class="fonte" name="email" required>
+                    <br>
+                    <label for="senha">crie uma senha</label>
+
+                    <input type="password" id="senha" placeholder="senha" class="fonte" name="senha" required>
+                    <br>
+
+                    <input type="submit" value="Cadastrar" class="botao-cadastro">
+
+                    <p>já tem uma conta? <a href="login.html">faça login</a>
+                    </p>
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+    <footer>
+        <div style="text-align: center;">
+            <p>*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚</p>
+            <p>&copy; 2025 ajuda.me. Todos os direitos reservados.</p>
+        </div>
+        <br>
+
+        <div class="footer-info">
+            <div class="contato-ajuda">
+                <h3>Contato</h3>
+                <p>ajudamelivraria@ajuda.me</p>
+                <p>(47)99625-9080</p>
+                <p><a href="contato.html">Instagram</a></p>
+                <p><a href="contato.html">Facebook</a></p>
+                <p><a href="contato.html">Twitter</a></p>
+            </div>
+            <div class="contato-ajuda">
+                <h3>Ajuda</h3>
+                <p><a href="contato.html">Fórum</a></p>
+                <p><a href="contato.html">Suporte</a></p>
+                <p>(44)9985-3234</p>
+
+            </div>
+        </div>
+        <div class="footer-icons">
+            <img src="imagens/mapas-do-google.png" alt="google maps">
+            <img src="imagens/whatsapp.png" alt="whatsapp">
+
+            <img src="imagens/instagram.png" alt="instagram">
+            <img src="imagens/facebook.png" alt="facebook">
+
+
+
+        </div>
+
+    </footer>
+
+</body>

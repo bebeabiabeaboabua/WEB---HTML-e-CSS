@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Exercício DOM</title>
+</head>
+
+<body>
+    <h1 id="titulo">Olá, mundo!</h1>
+    <p class="texto">Este é o primeiro parágrafo</p>
+    <p class="texto">Este é o segundo parágrafo</p>
+    <input type="text" id="nome">
+
+    <a id='link' href="https://fonts.google.com/specimen/Quicksand">fonte</a>
+
+
+    <div id="novaDiv"></div>
+
+    <script>
+        let titulo = document.getElementById('titulo');
+        titulo.innerText = 'bem vindo ao meu site';
+
+        let textos = document.getElementsByClassName('texto');
+        textos[0].style.color = 'blue'; //estilo pelo java
+        textos[1].style.color = 'red';
+        textos[1].style.backgroundColor = 'yellow'
+
+        let primeiroParagrafo = document.querySelector('.texto');
+        primeiroParagrafo.innerText = 'Este é um novo texto';
+
+        let todosParagrafos = document.querySelectorAll('p');
+        console.log(`quantidade de paragrafos: ${todosParagrafos.length}`);
+
+        //adicionar texto na div
+        let novoParagrafo = document.createElement('p');
+        novoParagrafo.innerText = "novo paragravo cfeato dinamicamente";
+        let novaDiv = document.getElementById('novaDiv');
+        novaDiv.appendChild(novoParagrafo)
+
+        novoParagrafo.innerHTML = '<h2> oioioio </2>';
+
+        //pegar info do form
+
+        let nome = document.querySelector('#nome');
+        nome.value = 'bia'
+
+        let link = document.getElementById('link');
+        link.setAttribute('href', 'https://www.mercadolivre.com.br/my-little-pony-g1-milky-way--celestial-ponies-pronta-entreg/up/MLBU800573082?matt_tool=18956390&utm_source=google_shopping&utm_medium=organic&pdp_filters=item_id:MLB3548268779')
+
+    </script>
+</body>
+
+</html>

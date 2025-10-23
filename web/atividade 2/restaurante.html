@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurante</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Restaurante</h1>
+        <label class="label">Buffet por Quilo: </label>
+        <input type="text" id="preco" placeholder="R$ 0,00">
+        <br><br>
+        <label class="label">Consumo do cliente: </label>
+        <input type="text" id="consumo" placeholder="Gramas">
+        <br><br>
+        <input type="button" id="botao" value="Calcular Preço">
+        <br><br>
+        <span id="msgValor"></span>
+
+    </form>
+
+    <script>
+        let botao = document.querySelector('#botao');
+        botao.addEventListener('click', function () {
+
+            let preco = Number(document.querySelector('#preco').value);
+            let consumo = Number(document.querySelector('#consumo').value);
+
+            //calculo do valor final
+            let quilos = consumo / 1000;
+            let valor = quilos * preco;
+            valor = valor.toFixed(2);
+
+
+            //apresentar dados
+            let msgValor = document.querySelector('#msgValor');
+
+            msgValor.innerText = `Valor a pagar R$ ${valor}`;
+
+        });
+    </script>
+</body>
+
+</html>

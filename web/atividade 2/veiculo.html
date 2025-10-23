@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>veiculo</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Revenda de Veículos</h1>
+        <label class="label">Veículo</label>
+        <input type="text" id="veiculo" placeholder="nome do veículo">
+        <br><br>
+        <label class="label">Preço (R$)</label>
+        <input type="text" id="preco" placeholder="R$00,00">
+        <br><br>
+        <input type="button" id="botao" value="ver promoção">
+        <br><br>
+        <span id="msgPromocao"></span>
+        <br>
+        <span id="msgEntrada"></span>
+        <br>
+        <span id="msgParcelas"></span>
+
+    </form>
+
+    <script>
+        let botao = document.querySelector('#botao');
+        botao.addEventListener('click', function () {
+
+            let veiculo = document.querySelector('#veiculo').value;
+            let preco = Number(document.querySelector('#preco').value);
+
+            //calculo da entrada
+            let entrada = Math.floor(preco * 0.5);
+
+            //calculo parcelas
+            let parcelas = Math.floor((preco * 0.5) / 12);
+
+            //apresentar dados
+            let msgPromocao = document.querySelector('#msgPromocao');
+            let msgEntrada = document.querySelector('#msgEntrada');
+            let msgParcelas = document.querySelector('#msgParcelas');
+
+
+            msgPromocao.innerText = `Promoção: ${veiculo}`;
+            msgEntrada.innerText = `Entrada de R$ ${entrada}`;
+            msgParcelas.innerText = `+ 12x de R$ ${parcelas}`;
+
+        });
+    </script>
+</body>
+
+</html>

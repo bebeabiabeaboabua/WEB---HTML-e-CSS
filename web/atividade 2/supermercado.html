@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Supermercado</h1>
+        <label class="label">Produto: </label>
+        <input type="text" id="nome" placeholder="Nome do produto">
+        <br><br>
+        <label class="label">Preço: </label>
+        <input type="text" id="preco" placeholder="R$0,00">
+        <br><br>
+        <input type="button" id="botao" value="Ver promoção">
+        <br><br>
+        <span id="msgPromocao"></span>
+        <br>
+        <span id="msg3Produto"></span>
+
+    </form>
+
+    <script>
+        let botao = document.querySelector('#botao');
+        botao.addEventListener('click', function () {
+
+            let nome = (document.querySelector('#nome').value);
+            let preco = Number(document.querySelector('#preco').value);
+
+            // levando 3 ganha 50% de desconto em um
+
+            let desconto = preco / 2;
+            let total = (preco * 2) + desconto;
+
+            //apresentar dados
+
+            let msgPromocao = document.querySelector('#msgPromocao');
+            let msg3Produto = document.querySelector('#msg3Produto');
+
+
+            msgPromocao.innerText = `${nome} - Promoção: Leve 3 por R$${total}`;
+            msg3Produto.innerText = `O 3º Produto custa apenas R$${desconto}`;
+
+
+        });
+    </script>
+</body>
+
+</html>
