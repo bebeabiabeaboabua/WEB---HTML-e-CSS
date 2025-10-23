@@ -127,6 +127,19 @@
             padding: 8px;
             text-decoration: none;
             color: #56756C;
+            font-size: 18px;
+            padding-right: 30px;
+            display: inline-block;
+            /* 👈 isso faz o transform funcionar */
+            transition: transform 0.2s ease;
+            /* anima o efeito */
+            font-weight: 600;
+
+        }
+                .bannerbotao {
+            padding: 8px;
+            text-decoration: none;
+            color: #56756C;
             font-size: 20px;
             padding-right: 30px;
             display: inline-block;
@@ -137,7 +150,7 @@
 
         }
 
-        .banner:hover {
+        .bannerbotao:hover {
             transform: scale(1.1);
             /* dá um efeitinho de zoom no hover */
 
@@ -213,6 +226,7 @@
             transition: all 0.3s ease;
             margin-top: 50px;
             margin-bottom: 20px;
+            border: none;
 
         }
 
@@ -221,7 +235,31 @@
             transform: scale(1.05);
         }
 
-        input {
+                .botao-cadastro {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #91ebc8;
+            padding: 20px;
+            border-radius: 12px;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            text-align: center;
+            vertical-align: middle;
+                        border: none;
+
+
+        }
+
+                .botao-cadastro:hover {
+            background-color: #6fd3ad;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .login-input {
             border: none;
             border-radius: 10px;
             height: 20px;
@@ -229,9 +267,11 @@
             background-color: #a0d6b2;
             color: #3e4e3b;
             width: 50%;
+                        transition: transform 0.2s ease, color 0.2s ease;
+
         }
 
-        input:focus {
+        .login-input:focus {
             outline: none;
             box-shadow: 0 0 10px rgb(108, 120, 177);
             background-color: rgb(192, 255, 241);
@@ -413,6 +453,7 @@
             vertical-align: middle;
             padding: 10px;
             border-bottom: 5px solid #796044;
+            
 
         }
 
@@ -432,6 +473,8 @@
         .item {
             height: 100%;
             padding: 20px;
+                        transition: transform 0.2s ease, color 0.2s ease;
+
         }
 
         .item:hover {

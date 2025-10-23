@@ -18,6 +18,7 @@
     <header>
 
         <a href="index.html"><img src="imagens/camaleao.png" id="logo" alt="logo camaleao"></a>
+
         <h3>ajuda.me</h3>
 
         <div>
@@ -29,7 +30,7 @@
         </div>
 
         <div class="banner">
-            <button class="cart-button" onclick="window.location.href='carrinho.html'">
+            <button class="cart-button">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
                     <circle cx="9" cy="21" r="1"></circle>
@@ -42,32 +43,23 @@
     </header>
 
     <main>
-        <div class="tela-login">
-            <img src="imagens/camaleao.png" class="camaleao-login">
+
+        <div class="principal">
+
+
+
             <div class="login-box">
+                <div>
+                    <p>Ops! Parece que você precisa estar logado para acessar o carrinho.</p>
+                    <a href="login.html" class="botao-entrar">Fazer login</a>
 
-                <p>ajuda.me</p>
+                </div>
 
-                <h3>login</h3>
 
-                <p>oi amigo, que bom ter você de volta!</p>
-
-                <form action=""">
-                    <label for="email">usuário</label>
-                    <input class="login-input" type="text" id="usuario" name="usuario" placeholder="usuário" class="fonte" required>
-
-                    <label for="senha">senha</label>
-                    <input class="login-input" type="password" id="senha" name="senha" placeholder="senha" class="fonte" required>
-                    <br><br>
-                    <input type="button" value="entrar" class="botao-entrar" id="botao">
-                </form>
-
-                <p>não tem uma conta? <a href="cadastro.html">criar conta</a>
-                </p>
             </div>
 
         </div>
-    <script src="js/login.js"></script>
+    <script src="javascript.js"></script>
 
     </main>
 

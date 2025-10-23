@@ -21,11 +21,11 @@
         <h3>ajuda.me</h3>
 
         <div>
-            <p><a href="index.html" class="banner">início</a></p>
+            <p><a href="index.html" class="bannerbotao">início</a></p>
         </div>
 
         <div>
-            <p><a href="login.html" class="banner">login</a></p>
+            <p><a href="login.html" class="bannerbotao">login</a></p>
         </div>
 
         <div class="banner">
@@ -50,31 +50,33 @@
                 <h3>criar conta</h3>
 
                 <p>que bom te conhecer!</p>
+                <form action="">
 
-                <label for="usuario">me diga como devo te chamar</label>
+                    <label for="usuario">me diga como devo te chamar</label>
 
-                <input type="text" id="usuario" placeholder="seu nome" class="fonte">
+                    <input class="login-input" type="text" id="usuario" placeholder="seu nome" class="fonte" name="nome" required>
 
-                <label for="email">email</label>
+                    <label for="email">email</label>
 
-                <input type="text" id="email" placeholder="email" class="fonte">
-                <br>
-                <label for="senha">crie uma senha</label>
+                    <input class="login-input" type="email" id="email" placeholder="email" class="fonte" name="email" required>
+                    <br>
+                    <label for="senha">crie uma senha</label>
 
-                <input type="password" id="senha" placeholder="senha" class="fonte">
+                    <input class="login-input" type="password" id="senha" placeholder="senha" class="fonte" name="senha" required>
+                    <br>
 
-                <label for="senha">confirme a senha</label>
-                <input type="password" id="senha" placeholder="senha" class="fonte">
-                <br>
-                <a href="index.html" class="botao-entrar">criar</a>
+                    <input type="button" value="Cadastrar" class="botao-cadastro" id="botao">
 
-                <p>já tem uma conta? <a href="login.html">faça login</a>
-                </p>
+                    <p>já tem uma conta? <a href="login.html">faça login</a>
+                    </p>
+                </form>
+
             </div>
 
         </div>
 
 
+    <script src="js/cadastro.js"></script>
 
 
 
